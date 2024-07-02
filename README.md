@@ -6,7 +6,9 @@
 # O que é o Redis:
    # O Redis (REmote DIctionary Server) é um banco de dados NoSQL de código aberto que armazena dados em memória. Ele é usado principalmente como cache de aplicativos ou banco de dados de resposta rápida. Por não depender de discos rígidos ou SSDs, o Redis oferece velocidade incomparável. Além disso, suporta várias estruturas de dados, como listas, hashes e conjuntos, tornando-o versátil para diferentes casos de uso.
 
-# Este prójeto tem como objetivo demonstrar como utilizar o Framework Spring Boot com o Redis.
+# Este projeto tem como objetivo demonstrar como utilizar o Framework Spring Boot com o Redis.
 
-# Docker command: docker run --name my-redis -p 6379:6379 -d redis
+# Comando Docker para instanciar um banco de dados NoSQL Redis em memória:
+
+# docker run --name my-redis -p 6379:6379 -d redis
 
