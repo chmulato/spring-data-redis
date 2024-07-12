@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.mulato.redis.entity.Product;
-import br.com.mulato.redis.repository.ProductDao;
+import br.com.mulato.redis.repository.ProductRepository;
 
 @RestController
 @RequestMapping("/product")
 public class ProductController {
 
 	@Autowired
-	private ProductDao dao;
+	private ProductRepository dao;
 
 	@PostMapping
 	public Product save(@RequestBody Product product) {

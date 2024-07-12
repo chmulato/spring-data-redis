@@ -10,6 +10,10 @@ import org.springframework.data.redis.repository.configuration.EnableRedisReposi
 import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
+import br.com.mulato.redis.entity.Product;
+import lombok.Setter;
+
+@Setter
 @Configuration
 @EnableRedisRepositories
 public class RedisConfig {
@@ -29,8 +33,8 @@ public class RedisConfig {
     }
 
     @Bean
-    public RedisTemplate<String, Object> template() {
-        RedisTemplate<String, Object> template = new RedisTemplate<>();
+    public RedisTemplate<String, Product> template() {
+        RedisTemplate<String, Product> template = new RedisTemplate<>();
         template.setConnectionFactory(connectionFactory());
         template.setKeySerializer(new StringRedisSerializer());
         template.setHashKeySerializer(new StringRedisSerializer());
